@@ -46,7 +46,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
             // Транзакція стартує
             transaction = session.beginTransaction();
             List<Employee> list =
-                    session.createQuery("FROM Employeer", Employee.class).list();
+                    session.createQuery("FROM Employee", Employee.class).list();
             // Транзакція виконується
             transaction.commit();
             // Повертаємо Optional-контейнер з колецією даних
