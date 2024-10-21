@@ -1,0 +1,1 @@
+{"statusCode":200,"success":true,"message":"Employee has been created successfully.","employee":{"id":5,"firstName":"Lucy","lastName":"Moon","position":"Cleaner","phone":"380-678689495"}}
