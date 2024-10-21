@@ -1,0 +1,16 @@
+
+-- БАЗА ДАНИХ
+CREATE DATABASE demo_db;
+
+
+CREATE TABLE IF NOT EXISTS employee
+( id BIGINT NOT NULL AUTO_INCREMENT,
+  first_Name VARCHAR(255) NOT NULL,
+  last_Name VARCHAR(255) NOT NULL,
+  position VARCHAR(255) NOT NULL,
+  phone VARCHAR(56) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+
+

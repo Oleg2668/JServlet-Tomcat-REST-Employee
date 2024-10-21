@@ -1,0 +1,116 @@
+REST API Employee
+---------------------
+
+Postman для тесту REST API
+https://www.postman.com/
+
+Для здійснення кожного запиту, натискаємо Send .
+Якщо REST-запит має тіло, необхідно налаштування
+в Postman: Body > raw > JSON.
+
+
+(1) Отримання даних
+
+GET
+http://localhost:8080/JServlet-Tomcat-REST-Employee-1.0-SNAPSHOT/api/v1/employee
+
+Даних, поки, немає.
+
+
+(2) Створення даних
+
+POST
+http://localhost:8080/Your-Project-Name-1.0-SNAPSHOT/api/v1/employee
+
+Виконуємо окремі запити
+
+{
+    "firstName": "John",
+    "lastName": "Green",
+    "position": "Top Manager",
+    "phone": "380-678689490"
+}
+
+{
+    "firstName": "Bob",
+    "lastName": "Bright",
+    "position": "Tech. Manager",
+     "phone": "380-678689491"
+}
+
+{
+    "firstName": "Alice",
+    "lastName": "Terra",
+    "position": "Web. Manager",
+    "phone": "380-678689493"
+    }
+
+{
+    "firstName": "Tom",
+    "lastName": "Bright",
+    "position": "Crisis Manager",
+    "phone": "380-678689494"
+}
+
+{
+    "firstName": "Lucy",
+    "lastName": "Moon",
+    "position": "Cleaner",
+       "phone": "380-678689495"
+   }
+
+
+
+Перевіремо через MySQL Workbench.
+
+
+(3) Отримання всіх даних
+
+GET
+http://localhost:8080/Your-Project-Name-1.0-SNAPSHOT/api/v1/employee
+
+
+(4) Отримання даних за id
+
+За існуючим id
+GET
+http://localhost:8080/Your-Project-Name-1.0-SNAPSHOT/api/v1/employee/4
+
+За НЕ існуючим id
+GET
+http://localhost:8080/Your-Project-Name-1.0-SNAPSHOT/api/v1/employee/9
+
+
+(5) Оновлення даних за id
+
+PUT
+http://localhost:8080/Your-Project-Name-1.0-SNAPSHOT/api/v1/employee/2
+
+{
+    "firstName": "Bob",
+    "lastName": "Bright",
+    "position": "Chief Tech. Manager",
+     "phone": "380-678689491"
+}
+
+PUT
+http://localhost:8080/Your-Project-Name-1.0-SNAPSHOT/api/v1/employee/3
+
+{
+    "firstName": "Alice",
+   "lastName": "Terra",
+    "position": "Web. Manager",
+    "phone": "110-7777777777"
+}
+
+Перевіремо через MySQL Workbench та REST-запит за відповідним id.
+Можемо також спробувати оновлення за НЕ існуючим id.
+
+
+(6) Видалення даних за id
+
+DELETE
+http://localhost:8080/Your-Project-Name-1.0-SNAPSHOT/api/v1/employee/4
+
+Перевіремо через MySQL Workbench та REST-запит отримання всіх даних.
+Можемо також спробувати видалення за НЕ існуючим id.
